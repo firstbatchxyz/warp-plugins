@@ -68,3 +68,4 @@ You can cascade the plugins (use multiple plugins) like this,
 const warp = WarpFactory.forMainnet().use(new FetchExtension()).use(new SnarkjsExtension());
 ```
 
+Check the example folder for example projects.
