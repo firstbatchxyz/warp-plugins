@@ -1,66 +1,59 @@
 # Warp Contracts custom plugins
 
-This is a quick guide to setup a local warp-plugins development and test environment.
+This is a monorepo that includes all the plugins and necessary development tools. At this stage of the development we are using yalc to substitute the npm registery. Basically yalc acts as a local package registery that hosts packages. If you want to learn more about [yalc](https://github.com/wclr/yalc) use this link to check their page.
 
-First you need to install [yalc](https://github.com/wclr/yalc) globally.
+## Installation
+
+First you need to install yalc globally.
 
 ```bash
 yarn global add yalc
 ```
 
-After that you need to clone the the warp-contracts repo to the location of your choice in your fs,
+After that clone this repo and build it,
 
 ```bash
-git clone https://github.com/warp-contracts/warp.git
-```
-
-Now we need to build the repo and publish it to local registery using yalc,
-
-```bash
-cd warp
+git clone https://github.com/firstbatchxyz/warp-plugins.git
+cd warp-plugins
 yarn
-yarn yalc:publish
 ```
+Keep in mind that sometimes build process takes some good amount of time.
 
-After that clone this repo to the location of your choice in your fs,
+## Publishing plugins to local registery using yalc
 
-```bash
-git clone https://github.com/fco-fbatch/warp-contracts-plugins.git
-```
-
-After that add the previously built and published warp-contracts module from local registery and build the repo,
-
-```bash
-yalc add warp-contracts
-yarn --network-timeout 1000000000
-```
-
-`--network-timeout` is necessary because yarn is pretty slow working with local `file:` dependencies (which yack creates and uses), just give it time to build on my system it took 5-10minutes (yes really)
-
-After that we are ready to publish our previously built plugins to local registery. Just choose a plugin of your choice and publish it,
+Choose a plugin of your choice and publish it using `yalc:publish`,
 
 ```bash
 cd warp-contracts-plugin-fetch
 yarn yalc:publish
 ```
 
-And you are done with setting up warp plugins development envrionment.
+## Adding plugins in your project using yalc
 
-## Local Project
+Importing the plugins using yalc is really easy. 
 
-Now that we are done with setting up the environment we can try our packages. Lets create a new project first,
+Instead of doing this in your project folder,
 
 ```bash
-mkdir your-cool-project-name
-yarn init -y
-yalc add warp-contracts
+yarn add warp-contracts-plugin-fetch
+```
+
+You need to do this,
+
+```bash
 yalc add warp-contracts-plugin-fetch
 yarn
 ```
+`yalc add <package>` fetches the package from the local yalc registery and copies it to the project root while updating your projects package.json. After running the `yalc add` command you should see something like the following in your package.json,
 
-After this point you can test the plugin (check the /examples of this repo for a starting point.)
+```json
+"warp-contracts-plugin-fetch": "file:.yalc/warp-contracts-plugin-fetch"
+```
+After that running `yarn` simply installs the package from project root. 
 
-Note that you need to import the plugin and attach it to the warp instance as follows,
+## Using the plugins in the project
+
+All you need to do is import the plugin as you normally do with packages installed with npm or yarn. 
 
 ```js
 import { WarpFactory } from "warp-contracts";
@@ -68,3 +61,10 @@ import { FetchExtension } from "warp-contracts-plugin-fetch";
 
 const warp = WarpFactory.forMainnet().use(new FetchExtension());
 ```
+
+You can cascade the plugins (use multiple plugins) like this,
+
+```js
+const warp = WarpFactory.forMainnet().use(new FetchExtension()).use(new SnarkjsExtension());
+```
+
