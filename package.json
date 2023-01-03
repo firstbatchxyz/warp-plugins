@@ -1,0 +1,9 @@
+{
+  "name": "warp-plugins",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/firstbatchxyz/warp-plugins.git",
+  "author": "fco-fbatch <farukcan@firstbatch.xyz>",
+  "license": "MIT"
+}
