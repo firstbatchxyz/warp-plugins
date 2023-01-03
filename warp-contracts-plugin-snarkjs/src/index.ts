@@ -1,9 +1,9 @@
 import { WarpPlugin, WarpPluginType } from "warp-contracts";
-import snarkjs from "snarkjs";
+import { groth16 } from "snarkjs";
 
 export class SnarkjsExtension implements WarpPlugin<any, void> {
   process(input: any): void {
-    input.snarkjs = snarkjs;
+    input.groth16 = groth16;
   }
 
   type(): WarpPluginType {
