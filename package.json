@@ -2,7 +2,8 @@
   "private": true,
   "workspaces": [
     "warp-contracts-plugin-fetch",
-    "warp-contracts-plugin-snarkjs"
+    "warp-contracts-plugin-snarkjs",
+    "warp-contracts-plugin-faker"
   ],
   "dependencies": {
     "warp-contracts": "^1.2.43"
