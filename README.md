@@ -17,6 +17,7 @@ git clone https://github.com/firstbatchxyz/warp-plugins.git
 cd warp-plugins
 yarn
 ```
+
 Keep in mind that sometimes build process takes some good amount of time.
 
 ## Publishing plugins to local registery using yalc
