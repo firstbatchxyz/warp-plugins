@@ -1,6 +1,6 @@
 {
   "name": "warp-contracts-plugin-fetch",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Fetch extension for Warp contracts",
   "types": "./lib/types/index.d.ts",
   "main": "./lib/cjs/index.js",
