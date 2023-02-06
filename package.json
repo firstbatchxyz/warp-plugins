@@ -6,7 +6,7 @@
     "warp-contracts-plugin-faker"
   ],
   "dependencies": {
-    "warp-contracts": "^1.2.43"
+    "warp-contracts": "^1.2.49"
   },
   "devDependencies": {
     "@types/jest": "^28.1.6",
