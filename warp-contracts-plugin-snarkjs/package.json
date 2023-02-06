@@ -1,6 +1,6 @@
 {
   "name": "warp-contracts-plugin-snarkjs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "SnarkJS extension for Warp Contracts",
   "types": "./lib/types/index.d.ts",
   "main": "./lib/cjs/index.js",
