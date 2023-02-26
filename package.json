@@ -2,11 +2,10 @@
   "private": true,
   "workspaces": [
     "warp-contracts-plugin-fetch",
-    "warp-contracts-plugin-snarkjs",
-    "warp-contracts-plugin-faker"
+    "warp-contracts-plugin-snarkjs"
   ],
   "dependencies": {
-    "warp-contracts": "^1.2.49"
+    "warp-contracts": "^1.2.52"
   },
   "devDependencies": {
     "@types/jest": "^28.1.6",

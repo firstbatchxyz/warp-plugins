@@ -1,7 +1,9 @@
 {
   "name": "warp-contracts-plugin-snarkjs",
-  "version": "1.1.0",
-  "description": "SnarkJS extension for Warp Contracts",
+  "version": "0.1.0",
+  "description": "SnarkJS custom plugin for Warp Contracts",
+  "author": "FirstBatch Team <dev@firstbatch.xyz>",
+  "license": "MIT",
   "types": "./lib/types/index.d.ts",
   "main": "./lib/cjs/index.js",
   "exports": {
@@ -28,7 +30,6 @@
     "test": "jest",
     "test:unit": "jest ./src/__tests__/unit"
   },
-  "license": "MIT",
   "files": [
     "lib/",
     "README.md"
