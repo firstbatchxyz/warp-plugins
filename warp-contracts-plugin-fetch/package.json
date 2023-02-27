@@ -32,6 +32,7 @@
   "license": "MIT",
   "files": [
     "lib/",
+    "LICENSE",
     "README.md"
   ],
   "devDependencies": {
