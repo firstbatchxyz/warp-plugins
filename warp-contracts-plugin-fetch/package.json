@@ -1,6 +1,6 @@
 {
   "name": "warp-contracts-plugin-fetch",
-  "version": "0.1.1",
+  "version": "0.1.5",
   "description": "Fetch custom plugin for Warp contracts",
   "author": "FirstBatch Team <dev@firstbatch.xyz>",
   "types": "./lib/types/index.d.ts",
