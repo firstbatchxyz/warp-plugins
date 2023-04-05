@@ -47,7 +47,8 @@
     "prettier": "*",
     "rimraf": "*",
     "ts-node": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "warp-isomorphic": "1.0.4"
   },
   "peerDependencies": {
     "warp-contracts": "*"
