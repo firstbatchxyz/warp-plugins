@@ -1,7 +1,7 @@
 {
   "name": "warp-contracts-plugin-snarkjs",
   "version": "0.1.6",
-  "description": "SnarkJS custom plugin for Warp Contracts",
+  "description": "SnarkJS plugin for Warp Contracts",
   "author": "FirstBatch Team <dev@firstbatch.xyz>",
   "license": "MIT",
   "types": "./lib/types/index.d.ts",

@@ -1,6 +1,13 @@
-# Custom Warp Contracts Plugin Snarkjs
+# Snarkjs Plugin for Warp Contracts
 
-[Snarkjs](https://github.com/iden3/snarkjs/blob/master/README.md) extension for warp contracts.
+[Snarkjs](https://github.com/iden3/snarkjs/blob/master/README.md) extension for warp contracts, allowing one to verify proofs within a Warp smart-contract.
+
+Note that:
+
+- `v0.1.x` uses SnarkJS `v0.6.x`
+- `v0.2.x` uses SnarkJS `v0.7.x`
+
+You might want to make sure that the client that is generating the proofs has the same minor version.
 
 ## Installation
 
@@ -8,7 +15,7 @@
 yarn add warp-contracts-plugin-snarkjs
 ```
 
-## Using the plugins in the project
+## Usage
 
 ```js
 import { WarpFactory } from "warp-contracts";
@@ -17,10 +24,9 @@ import { SnarkjsExtension } from "warp-contracts-plugin-snarkjs";
 const warp = WarpFactory.forMainnet().use(new SnarkjsExtension());
 ```
 
-You can cascade the plugins (use multiple plugins) like this,
+Then, use `groth16` or `plonk` within the smart-contract as:
 
 ```js
-const warp = WarpFactory.forMainnet()
-  .use(new FetchExtension())
-  .use(new SnarkjsExtension());
+SmartWeave.extensions.groth16;
+SmartWeave.extensions.plonk;
 ```
